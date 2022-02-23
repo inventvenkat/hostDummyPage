@@ -1,8 +1,26 @@
 <!DOCTYPE html>
 <html>
+
+<script>
+    function display(){
+        var acsurl = document.getElementById("acsurl").value;
+        var pareq = document.getElementById("pareq").value;
+        console.log("ippothaikku something");
+        console.log("ACS URL", acsurl);
+        console.log("Pareq", pareq);
+    }
+</script>
+
 <body>
 
-<h1>hosted a PG page - updated</h1>
+    <h1>hosted a PG page</h1>
+    <form action="#" onsubmit="display()">
+        <label>ACS Url:</label>
+        <input type="text" id="acsurl"><br><br>
+        <label>Pareq:</label>
+        <input type="text" id="pareq"><br><br>
+        <input type="submit" value="Submit">
+    </form>
 
 </body>
 </html>
