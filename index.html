@@ -2,23 +2,25 @@
 <html>
 
 <script>
-    function display(){
-        var acsurl = document.getElementById("acsurl").value;
-        var pareq = document.getElementById("pareq").value;
-        console.log("ippothaikku something");
-        console.log("ACS URL", acsurl);
-        console.log("Pareq", pareq);
+    function setAction(form){
+        action = document.getElementById("action").value;
+        console.log("this is the action", action)
+        form.action=action;
+        return true;
     }
 </script>
-
 <body>
 
     <h1>hosted a PG page</h1>
-    <form action="#" onsubmit="display()">
-        <label>ACS Url:</label>
-        <input type="text" id="acsurl"><br><br>
-        <label>Pareq:</label>
-        <input type="text" id="pareq"><br><br>
+    <form onsubmit="return setAction(this)" method="post">
+        <label>Url:</label>
+        <input type="text" name="url", id="action"><br><br>
+        <label>md:</label>
+        <input type="text" name="md"><br><br>
+        <label>paReq:</label>
+        <input type="text" name="paReq"><br><br>
+        <label>termUrl:</label>
+        <input type="text" name="termUrl" value="https://api.juspay.in/end"><br><br>
         <input type="submit" value="Submit">
     </form>
 
